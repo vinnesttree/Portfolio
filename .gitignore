@@ -1,0 +1,9 @@
+# LinkedIn data exports contain private data (messages, connections, contact
+# details). Import them with scripts/import-linkedin.mjs, never commit them.
+/linkedin-export/
+Basic_LinkedInDataExport*/
+Complete_LinkedInDataExport*/
+*.zip
+
+node_modules/
+.DS_Store

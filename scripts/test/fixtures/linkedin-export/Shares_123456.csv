@@ -1,0 +1,5 @@
+Date,ShareLink,ShareCommentary,SharedUrl,MediaUrl,Visibility
+2024-05-02 14:03:11,https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A1,"Excited to share a new board, with commas, ""quotes""
+and a second line. {hashtag|\#|pcb}",https://example.com/board,,PUBLIC
+2024-04-01 09:00:00,https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A2,Connections-only thoughts.,,,CONNECTIONS
+2024-03-01 09:00:00,https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A3,,https://example.com/repost,,PUBLIC

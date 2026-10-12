@@ -1,0 +1,3 @@
+Name,Published On,Description,Publisher,Url
+A Fixture Paper on Testing,"Mar 15, 2023",Abstract text.,Journal of Examples,https://example.com/paper
+Unsafe Link Paper,2021,,Nowhere Press,javascript:alert(1)

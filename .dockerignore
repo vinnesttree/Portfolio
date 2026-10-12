@@ -1,0 +1,5 @@
+# Only the Dockerfile, nginx config and site/ are needed in the image.
+*
+!Dockerfile
+!nginx/
+!site/

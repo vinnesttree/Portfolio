@@ -1,0 +1,29 @@
+{
+  "name": "Alex Roeser",
+  "headline": "Embedded systems, PCB design & firmware",
+  "location": "",
+  "about": [
+    "I build electronics end to end: schematic capture and board layout in KiCad, bring-up, and the firmware that makes each board useful, on AVR, RP2040 and Arduino platforms.",
+    "Around the hardware I write the tools that make it easier to work with, from Python hosts that talk to microcontrollers over serial to browser scripts that make a busy makerspace easier to run."
+  ],
+  "email": "",
+  "resume": "",
+  "links": {
+    "github": "https://github.com/vinnesttree",
+    "linkedin": "https://www.linkedin.com/in/aroeser2/"
+  },
+  "skills": [
+    {
+      "group": "Hardware",
+      "items": ["KiCad schematic & PCB layout", "USB-C Power Delivery", "Li-ion charging & protection", "DC-DC regulators", "Addressable LEDs", "Stepper motor drivers", "Gerbers, BOMs & stencils"]
+    },
+    {
+      "group": "Firmware",
+      "items": ["C / C++", "AVR (ATmega328P)", "RP2040", "Arduino", "PlatformIO", "Interrupts & timers", "I²C", "UART / serial protocols"]
+    },
+    {
+      "group": "Software",
+      "items": ["Python", "JavaScript", "Userscripts & DOM tooling", "MIDI processing", "Git & GitHub"]
+    }
+  ]
+}

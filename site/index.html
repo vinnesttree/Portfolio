@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alex Roeser · Embedded systems & hardware</title>
+  <meta name="description" content="Portfolio of Alex Roeser: custom PCBs, embedded firmware and the software tools around them.">
+  <meta name="author" content="Alex Roeser">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alex Roeser · Embedded systems & hardware">
+  <meta property="og:description" content="Custom PCBs, embedded firmware and the software tools around them.">
+  <meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#101418" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <span class="brand-mark" aria-hidden="true">AR</span>
+        <span class="brand-name" data-bind="name">Alex Roeser</span>
+      </a>
+      <nav class="site-nav" aria-label="Sections">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">
+          <span class="visually-hidden">Menu</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li data-section-link="experience" hidden><a href="#experience">Experience</a></li>
+          <li data-section-link="writing" hidden><a href="#writing">Writing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Portfolio</p>
+          <h1 class="hero-name" data-bind="name">Alex Roeser</h1>
+          <p class="hero-headline" data-bind="headline">Embedded systems, PCB design &amp; firmware</p>
+          <p class="hero-location" data-bind="location" hidden></p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">See my projects</a>
+            <a class="button" data-link="github" href="https://github.com/vinnesttree" rel="noopener">GitHub</a>
+            <a class="button" data-link="linkedin" href="https://www.linkedin.com/in/aroeser2/" rel="noopener">LinkedIn</a>
+            <a class="button" data-link="resume" href="#" hidden>Résumé</a>
+          </div>
+        </div>
+        <aside class="spec-card" aria-label="At a glance">
+          <div class="spec-card-head">
+            <span class="dot" aria-hidden="true"></span><span class="dot" aria-hidden="true"></span><span class="dot" aria-hidden="true"></span>
+            <span class="spec-card-title">at-a-glance</span>
+          </div>
+          <dl class="spec-list" id="glance">
+            <div><dt>Focus</dt><dd>Embedded systems &amp; PCB design</dd></div>
+            <div><dt>Toolchain</dt><dd>KiCad · PlatformIO · C/C++ · Python</dd></div>
+            <div><dt>Platforms</dt><dd>AVR · RP2040 · Arduino</dd></div>
+            <div><dt>Public repos</dt><dd data-bind="repoCount"><a href="https://github.com/vinnesttree?tab=repositories" rel="noopener">See GitHub</a></dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div>
+          <h2 class="section-title" id="about-title"><span class="section-index">01</span>About</h2>
+          <div class="prose" id="about-body">
+            <p>I build electronics end to end: schematic capture and board layout in KiCad, bring-up, and the firmware that makes each board useful.</p>
+          </div>
+        </div>
+        <div class="skills" id="skills" aria-label="Skills"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="projects-title"><span class="section-index">02</span>Projects</h2>
+          <a class="text-link" data-link="github" href="https://github.com/vinnesttree" rel="noopener">All repositories on GitHub →</a>
+        </div>
+        <div class="project-grid" id="project-grid">
+          <noscript><p>Projects load with JavaScript. You can browse them on <a href="https://github.com/vinnesttree">GitHub</a>.</p></noscript>
+        </div>
+        <div class="more-repos" id="more-repos" hidden>
+          <h3 class="subsection-title">More on GitHub</h3>
+          <ul class="repo-list" id="repo-list"></ul>
+        </div>
+        <div class="more-repos" id="li-projects" hidden>
+          <h3 class="subsection-title">More projects</h3>
+          <div class="card-list" id="li-project-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="experience-title" hidden>
+      <div class="container">
+        <h2 class="section-title" id="experience-title"><span class="section-index">03</span>Experience</h2>
+        <div class="two-col">
+          <div data-block="experience" hidden>
+            <h3 class="subsection-title">Work</h3>
+            <ol class="timeline" id="experience-list"></ol>
+          </div>
+          <div class="stack">
+            <div data-block="education" hidden>
+              <h3 class="subsection-title">Education</h3>
+              <ol class="timeline" id="education-list"></ol>
+            </div>
+            <div data-block="certifications" hidden>
+              <h3 class="subsection-title">Licenses &amp; certifications</h3>
+              <ul class="plain-list" id="certification-list"></ul>
+            </div>
+            <div data-block="honors" hidden>
+              <h3 class="subsection-title">Honors &amp; awards</h3>
+              <ul class="plain-list" id="honor-list"></ul>
+            </div>
+            <div data-block="volunteering" hidden>
+              <h3 class="subsection-title">Volunteering</h3>
+              <ol class="timeline" id="volunteering-list"></ol>
+            </div>
+            <div data-block="languages" hidden>
+              <h3 class="subsection-title">Languages</h3>
+              <ul class="plain-list" id="language-list"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="writing" aria-labelledby="writing-title" hidden>
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="writing-title"><span class="section-index">04</span>Writing</h2>
+          <a class="text-link" data-link="linkedin-activity" href="https://www.linkedin.com/in/aroeser2/recent-activity/all/" rel="noopener">All activity on LinkedIn →</a>
+        </div>
+        <div data-block="publications" hidden>
+          <h3 class="subsection-title">Publications</h3>
+          <div class="card-list" id="publication-list"></div>
+        </div>
+        <div data-block="articles" hidden>
+          <h3 class="subsection-title">Articles</h3>
+          <div class="card-list" id="article-list"></div>
+        </div>
+        <div data-block="posts" hidden>
+          <h3 class="subsection-title">Posts on LinkedIn</h3>
+          <div class="post-grid" id="post-list"></div>
+          <button class="button show-more" type="button" id="posts-more" hidden>Show all posts</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="linkedin-callout" aria-label="LinkedIn">
+      <div class="container">
+        <div class="callout">
+          <div>
+            <h2 class="callout-title">More on LinkedIn</h2>
+            <p>Experience, education, posts and publications live on my LinkedIn profile.</p>
+          </div>
+          <a class="button button-primary" data-link="linkedin" href="https://www.linkedin.com/in/aroeser2/" rel="noopener">View LinkedIn profile</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 class="section-title" id="contact-title"><span class="section-index">03</span>Contact</h2>
+        <p class="contact-lede">Want to talk about a project, a role or a board you're stuck on? Get in touch.</p>
+        <ul class="contact-list" id="contact-list">
+          <li><a class="contact-item" data-link="linkedin" href="https://www.linkedin.com/in/aroeser2/" rel="noopener"><span class="contact-label">LinkedIn</span><span class="contact-value">in/aroeser2</span></a></li>
+          <li><a class="contact-item" data-link="github" href="https://github.com/vinnesttree" rel="noopener"><span class="contact-label">GitHub</span><span class="contact-value">@vinnesttree</span></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span data-bind="year">2026</span> <span data-bind="name">Alex Roeser</span></p>
+    </div>
+  </footer>
+</body>
+</html>

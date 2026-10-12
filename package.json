@@ -1,0 +1,14 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Alex Roeser's portfolio site, served as a static site from a Docker container.",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "import:linkedin": "node scripts/import-linkedin.mjs",
+    "test": "node --test scripts/test/import-linkedin.test.mjs"
+  }
+}

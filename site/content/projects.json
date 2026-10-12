@@ -1,0 +1,85 @@
+{
+  "githubUser": "vinnesttree",
+  "showOtherRepos": true,
+  "exclude": ["Portfolio"],
+  "projects": [
+    {
+      "repo": "PPSTrigger",
+      "title": "PPSTrigger",
+      "tagline": "Adjustable USB-C PD bench supply on a custom PCB",
+      "summary": "A pocket bench power supply. It negotiates a USB-C Power Delivery PPS or AVS contract with a charger, lets you dial in voltage and current limit from the board, and shows the live output voltage on a 7-segment display.",
+      "highlights": [
+        "Two-layer KiCad board: ATmega328P, AP33772S USB-PD sink controller, TPS62933 buck regulator, MOSFET output switching, current-sense shunt and NTC thermistor",
+        "Register-level AVR firmware: Timer2 1 ms tick, pin-change interrupts with software debounce, multiplexed three-digit display",
+        "Requests 5–28 V in 0.1 V steps with a 0.5–3 A current limit, waits for button presses to settle before sending a new request over I²C, and falls back to a fixed PDO on chargers without PPS/AVS",
+        "Fabrication outputs checked in: Gerbers, drill files, BOM and paste stencil"
+      ],
+      "specs": [
+        { "label": "MCU", "value": "ATmega328P" },
+        { "label": "PD controller", "value": "AP33772S" },
+        { "label": "Output", "value": "5–28 V · ≤ 3 A" },
+        { "label": "Toolchain", "value": "KiCad · PlatformIO" }
+      ],
+      "tags": ["C++", "AVR", "USB Power Delivery", "KiCad", "PCB design"],
+      "links": []
+    },
+    {
+      "repo": "TixClock",
+      "title": "TixClock",
+      "tagline": "A miniature, battery-powered recreation of the ThinkGeek Tix clock",
+      "summary": "The Tix clock, sold by ThinkGeek in 2006 and long since discontinued, shows the time as shuffling patterns of lit squares. TixClock rebuilds it in miniature on a chip-down RP2040 board.",
+      "status": "In progress",
+      "highlights": [
+        "Chip-down RP2040 design with external QSPI flash and crystal, PCF8523 real-time clock with coin-cell backup, and a level shifter driving 27 WS2812B LEDs",
+        "18650 power path: TP4056 charger, DW01A/8205A protection and a TPS61022 boost converter, fed from USB-C",
+        "Firmware shuffles the lit LEDs in each colour-coded field every minute using the RP2040's random source; three buttons set the time",
+        "Next up: battery management and an enclosure"
+      ],
+      "specs": [
+        { "label": "MCU", "value": "RP2040 (chip-down)" },
+        { "label": "Display", "value": "27 × WS2812B" },
+        { "label": "RTC", "value": "PCF8523" },
+        { "label": "Power", "value": "18650 · USB-C" }
+      ],
+      "tags": ["C++", "RP2040", "FastLED", "KiCad", "PCB design"],
+      "links": []
+    },
+    {
+      "repo": "StepperMusic",
+      "title": "StepperMusic",
+      "tagline": "MIDI files performed by stepper motors",
+      "summary": "Turns stepper motors into instruments. A Python host parses a MIDI file and streams notes over serial to an Arduino, which drives up to five motors at audio frequencies.",
+      "highlights": [
+        "Python host (mido + pyserial) flattens every MIDI track into one timed note stream, reduces it to the available polyphony and assigns motors ahead of time to avoid runtime races",
+        "Non-blocking Arduino firmware for an Uno R4 WiFi and A4988 drivers generates step pulses on micros() timing, so notes on different motors can overlap",
+        "Plain-text serial protocol: motor, frequency, duration per line"
+      ],
+      "specs": [
+        { "label": "Host", "value": "Python" },
+        { "label": "MCU", "value": "Arduino Uno R4 WiFi" },
+        { "label": "Drivers", "value": "A4988 × 5" }
+      ],
+      "tags": ["Python", "C++", "Arduino", "MIDI", "Serial"],
+      "links": []
+    },
+    {
+      "repo": "Design-Hub-Waterfall",
+      "title": "Design Hub Reservation Waterfall",
+      "tagline": "A live Gantt chart for a makerspace's 3D-printer reservations",
+      "summary": "A browser userscript for the Engineering Design Hub's reservation system at the University of Nebraska–Lincoln. It turns the day's reservation table into a waterfall chart, so staff can see every printer's schedule at a glance.",
+      "highlights": [
+        "Parses the reservation table in place and draws a dark-mode timeline per printer, in a configurable order, with a current-time marker",
+        "Assigns tool colours on the fly, hides idle printers behind a toggle, and shows reservation details on hover",
+        "Published on Greasy Fork for one-click install"
+      ],
+      "specs": [
+        { "label": "Type", "value": "Userscript" },
+        { "label": "Runs in", "value": "A userscript manager, e.g. Tampermonkey" }
+      ],
+      "tags": ["JavaScript", "Userscript", "Data visualization"],
+      "links": [
+        { "label": "Install from Greasy Fork", "url": "https://greasyfork.org/en/scripts/572099-engineering-design-hub-reservation-waterfall" }
+      ]
+    }
+  ]
+}
