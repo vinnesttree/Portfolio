@@ -29,9 +29,13 @@ The container:
 - exposes `/healthz` for the Docker health check
 - runs read-only with all Linux capabilities dropped under Compose
 
+### TrueNAS with Dockge and Nginx Proxy Manager
+
+Every push to `main` publishes a ready-built image to `ghcr.io/vinnesttree/portfolio:latest`, using the GitHub Actions workflow in `.github/workflows/container-image.yml`. Dockge on TrueNAS can run that image directly, with Nginx Proxy Manager in front for HTTPS. Updating the site is then a push followed by Dockge's **Update** button. The step-by-step guide is in [docs/truenas-dockge.md](docs/truenas-dockge.md).
+
 ### HTTPS and a domain
 
-The container serves plain HTTP, so put it behind whatever already terminates TLS on your server (Caddy, Traefik, nginx or Cloudflare). For a single server, Caddy can fetch certificates automatically. Add this to `docker-compose.yml`, replacing the domain with yours, and point the domain's DNS at the server:
+The container serves plain HTTP, so put it behind whatever already terminates TLS on your server (Nginx Proxy Manager, Caddy, Traefik, nginx or Cloudflare). For a single server without a proxy yet, Caddy can fetch certificates automatically. Add this to `docker-compose.yml`, replacing the domain with yours, and point the domain's DNS at the server:
 
 ```yaml
   caddy:
@@ -98,6 +102,8 @@ The tests cover the LinkedIn importer: CSV parsing, date formats, field mapping,
 
 ```
 Dockerfile, docker-compose.yml   Container image and run configuration
+.github/workflows/               Tests, then builds and publishes the image to GHCR
+docs/truenas-dockge.md           Hosting guide: TrueNAS + Dockge + Nginx Proxy Manager
 nginx/default.conf               Server config: headers, caching, health check
 site/                            Everything that gets served
   index.html, 404.html
